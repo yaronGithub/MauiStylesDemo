@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiStylesDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MauiStylesDemo.Views"
+    Shell.FlyoutBehavior="Flyout"
+    FlowDirection="RightToLeft">
+
+    <FlyoutItem Title="No Style">
+        <ShellContent
+        Title="No Style"
+        ContentTemplate="{DataTemplate views:NoStyle}"
+        Route="NoStyle" />    
+    </FlyoutItem>
+
+    <FlyoutItem Title="Explicit Element Level">
+        <ShellContent
+        Title="Explicit Element Level"
+        ContentTemplate="{DataTemplate views:ExplicitStyleElementLevel}"
+        Route="EEL" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Explicit Page Level">
+        <ShellContent
+        Title="Explicit Page Level"
+        ContentTemplate="{DataTemplate views:ExplicitStylePageLevel}"
+        Route="EPL" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Explicit App Level">
+        <ShellContent
+        Title="Explicit App Level"
+        ContentTemplate="{DataTemplate views:ExplicitStyleAppLevel}"
+        Route="EPL" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Implicit">
+        <ShellContent
+        Title="Implicit"
+        ContentTemplate="{DataTemplate views:ImplicitStyle}"
+        Route="EPL" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Dynamic Style">
+        <ShellContent
+        Title="Dynamic Style"
+        ContentTemplate="{DataTemplate views:DynamicStyles}"
+        Route="EPL" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="ימין לשמאל">
+        <ShellContent
+        Title="ימין לשמאל"
+        ContentTemplate="{DataTemplate views:RTL}"
+        Route="RTL" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="טופס עם ולידציה">
+        <ShellContent
+        Title="טופס עם ולידציה"
+        ContentTemplate="{DataTemplate views:FormValidation}"
+        Route="FV" />
+    </FlyoutItem>
+</Shell>

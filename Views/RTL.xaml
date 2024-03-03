@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiStylesDemo.Views.RTL"
+             Title="ימין לשמאל"
+             FlowDirection="RightToLeft">
+    <VerticalStackLayout>
+        <StackLayout Padding="0,20,0,0">
+
+            <Label Text="שם" FontSize="Small" />
+            <Entry Placeholder="הכנס שם" />
+            <Label Text="גיל" FontSize="Small" />
+            <Entry Placeholder="הכנס גיל" FontSize="Small">
+            </Entry>
+
+            <Label Text="תאריך לידה" FontSize="Small" />
+            <DatePicker >
+            </DatePicker>
+
+            <Label Text="דואר אלקטרוני" FontSize="Small" />
+            <Entry Placeholder="הכנס דואר אלקטרוני" >
+            </Entry>
+            <Label Text="סיסמה" FontSize="Small" />
+            <Entry x:Name="txtpassword" IsPassword="True" Placeholder="הכנס סיסמה" >
+            </Entry>
+
+            <Label Text="אישור סיסמה" FontSize="Small" />
+            <Entry IsPassword="True" Placeholder="הכנס סיסמה זהה לזו שלמלעלה">
+            </Entry>
+            <Label Text="טלפון" FontSize="Small" />
+            <Entry  Placeholder="הכנס טלפון בן 10 ספרות" >
+            </Entry>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
