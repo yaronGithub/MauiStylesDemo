@@ -96,11 +96,54 @@ namespace MauiStylesDemo.ViewModels
         }
         #endregion
 
+        private bool showDateError;
+        public bool ShowDateError
+        {
+            get => showAgeError;
+            set
+            {
+                showDateError = value;
+                OnPropertyChanged("ShowDateError");
+            }
+        }
+        private DateTime date;
+        public DateTime Date
+        {
+            get => date;
+            set
+            {
+                date = value;
+                ValidateDate();
+                OnPropertyChanged("Date");
+            }
+        }
+
+        private string dateError;
+        public string DateError
+        {
+            get => dateError;
+            set
+            {
+                dateError = value;
+                OnPropertyChanged("DateError");
+            }
+        }
+        private void ValidateDate()
+        {
+            
+            DateTime thisDate = DateTime.Now;
+            TimeSpan diff = thisDate - Date;
+            double years = diff.TotalDays / 365.25;
+            ShowDateError = (years <= 13);
+        }
+
         public FormValidationViewModel()
         {
             this.NameError = "זהו שדה חובה";
             this.ShowNameError = false;
             this.AgeError = "הגיל חייב להיות גדול מ 13";
+            this.DateError = "הגיל חייב להיות גדול מ 13";
+            this.ShowDateError = false;
             this.ShowAgeError = false;
             this.SaveDataCommand = new Command(() => SaveData());
         }

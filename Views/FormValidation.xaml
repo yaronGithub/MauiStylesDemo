@@ -49,11 +49,26 @@
         </Grid>
         <Entry Placeholder="הכנס גיל גדול מ 13" Text="{Binding Age}" Style="{StaticResource entryStyle}" Keyboard="Numeric"/>
 
+        <!-- תאריך -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="תאריך לידה" FontSize="Small" />
+            <Label Text="{Binding DateError}" IsVisible="{Binding ShowDateError}" Grid.Column="1" Style="{StaticResource labelErrorStyle}"/>
+        </Grid>
 
-        <Label Text="תאריך לידה" FontSize="Small" />
-        <DatePicker >
-        </DatePicker>
+        <DatePicker Date="{Binding Date}"></DatePicker>
 
+        
+        
+        
+        
+        
         <Label Text="דואר אלקטרוני" FontSize="Small" />
         <Entry Placeholder="הכנס דואר אלקטרוני" >
         </Entry>
